@@ -1,0 +1,79 @@
+{
+  "_from": "git+https://github.com/fabianfett/s3-plugin-webpack.git",
+  "_id": "webpack-s3-plugin@0.9.0",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/webpack-s3-plugin",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "webpack-s3-plugin@git+https://github.com/fabianfett/s3-plugin-webpack.git",
+    "name": "webpack-s3-plugin",
+    "escapedName": "webpack-s3-plugin",
+    "rawSpec": "git+https://github.com/fabianfett/s3-plugin-webpack.git",
+    "saveSpec": "git+https://github.com/fabianfett/s3-plugin-webpack.git",
+    "fetchSpec": "https://github.com/fabianfett/s3-plugin-webpack.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+https://github.com/fabianfett/s3-plugin-webpack.git#d92893d40ce433697caaf816df4cca813a8191e7",
+  "_spec": "webpack-s3-plugin@git+https://github.com/fabianfett/s3-plugin-webpack.git",
+  "_where": "/usr/app",
+  "author": {
+    "name": "Mika Kalathil"
+  },
+  "bugs": {
+    "url": "https://github.com/MikaAK/s3-plugin-webpack/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "aws-sdk": "~2.4.1",
+    "cdnizer": "^1.1.5",
+    "lodash": "^4.13.0",
+    "progress": "^1.1.8",
+    "recursive-readdir": "^2.0.0",
+    "s3": "git+https://github.com/andrewrk/node-s3-client.git#master"
+  },
+  "deprecated": false,
+  "description": "Uploads compiled assets to s3 after build",
+  "devDependencies": {
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-register": "^6.9.0",
+    "chai": "^3.4.1",
+    "dotenv": "^2.0.0",
+    "eslint": "^2.13.0",
+    "eslint-loader": "^1.3.0",
+    "html-webpack-plugin": "^2.21.0",
+    "mocha": "^2.5.3",
+    "sinon": "^1.17.4",
+    "webpack": "^1.13.1"
+  },
+  "homepage": "https://github.com/MikaAK/s3-plugin-webpack",
+  "keywords": [
+    "s3",
+    "webpack",
+    "node",
+    "upload",
+    "production"
+  ],
+  "license": "MIT",
+  "main": "dist/s3_plugin.js",
+  "name": "webpack-s3-plugin",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/MikaAK/s3-plugin-webpack.git"
+  },
+  "scripts": {
+    "build": "webpack",
+    "lint": "eslint ./src ./test",
+    "prep:major": "npm run build && npm version major",
+    "prep:minor": "npm run build && npm version minor",
+    "prep:patch": "npm run build && npm version patch",
+    "test": "NODE_ENV='test' mocha -t 10000 --compilers js:babel-register",
+    "watch": "webpack --watch"
+  },
+  "version": "0.9.0"
+}
